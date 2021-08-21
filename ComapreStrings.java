@@ -2,39 +2,25 @@ package Assignment;
 import java.util.Scanner;
 public class ComapreStrings {
 
-		public static void main(String[] args) {
-			String Sentence;
-			Scanner sc = new Scanner(System.in);
-			System.out.print("\nEnter the string : ");
-			Sentence = sc.nextLine();
-			int vowels = 0, consonants = 0, digits = 0, spaces = 0, symbols = 0;
-
-         	Sentence = Sentence.toLowerCase();
-			for(int i = 0; i < Sentence.length(); ++i)
+	public static void main(String[] args) {
+				String str1="Java Techie";
+			String str2="Python Techie";
+			//String str3=str1;
+			if(str1.equals(str2))
 			{
-			char ch = Sentence.charAt(i);
-			if(ch == 'a' || ch == 'e' || ch == 'i'
-			|| ch == 'o' || ch == 'u') {
-			++vowels;
+				System.out.println(str1.equals(str2));
+				System.out.println("Strings are equal..... ");
+				
 			}
-			else if((ch >= 'a'&& ch <= 'z')) {
-			++consonants;
-			}
-			else if( ch >= '0' && ch <= '9')
+			else
 			{
-			++digits;
+					System.out.println(str1.equals(str2));
+					System.out.println("Strings are not equal..... ");
+					
 			}
-			else if (ch ==' ')
-			{
-			++spaces;
-			}
-			}
-	System.out.println("Vowels: " + vowels);
-	System.out.println("Consonants: " + consonants);
-	System.out.println("Digits: " + digits);
-	System.out.println("White spaces: "  + spaces);
-
+			
 		}
-		
-	}
 
+
+
+	}

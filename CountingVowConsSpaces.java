@@ -1,24 +1,40 @@
 package Assignment;
+import java.util.Scanner;
 public class CountingVowConsSpaces {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-				String str1="Java Techie";
-			String str2="Python Techie";
-			//String str3=str1;
-			if(str1.equals(str2))
-			{
-				System.out.println("Strings are equal ");
-				System.out.println(str1.equals(str2));
-			}
-			else
-			{
-				System.out.println("strings are not equal ");
-				System.out.println(str1.equals(str2));
-			}
-			
+		String Sentence;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the string : ");
+		Sentence = sc.nextLine();
+		int vowels = 0, consonants = 0, digits = 0, spaces = 0, symbols = 0;
+
+     	Sentence = Sentence.toLowerCase();
+		for(int i = 0; i < Sentence.length(); ++i)
+		{
+		char ch = Sentence.charAt(i);
+		if(ch == 'a' || ch == 'e' || ch == 'i'
+		|| ch == 'o' || ch == 'u') {
+		++vowels;
 		}
-
-
+		else if((ch >= 'a'&& ch <= 'z')) {
+		++consonants;
+		}
+		else if( ch >= '0' && ch <= '9')
+		{
+		++digits;
+		}
+		else if (ch ==' ')
+		{
+		++spaces;
+		}
+		}
+System.out.println("Vowels: " + vowels);
+System.out.println("Consonants: " + consonants);
+System.out.println("Digits: " + digits);
+System.out.println("White spaces: "  + spaces);
 
 	}
+	
+}
+
