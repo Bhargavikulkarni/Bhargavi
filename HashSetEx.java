@@ -10,7 +10,7 @@ public class HashSetEx {
 		hashset.add(100);
 		hashset.add(100);
 		hashset.add(200);
-		hashset.add(300);
+		hashset.add(200);
 		hashset.add(true);
 		hashset.add("Agiliztech");
 		hashset.add(null);

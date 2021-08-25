@@ -1,17 +1,16 @@
 package Assignment;
 
 class Customer {
-	int bal;
+	int balance;
 
 	Customer(int bal) {
-		this.bal = bal;
+		this.balance = bal;
 	}
 }
 
 public class CustomerBankTransaction {
 	public Customer findstatus(int bal) throws RunTimeUserExceptionEx {
 		if (bal == 500) {
-			// Create your own Exception
 			throw new RunTimeUserExceptionEx("Balance is zero...Can not withdraw money...!");
 		}
 
